@@ -1,4 +1,6 @@
 # minesweeper_solver
+useage: python3 sweeper_solver.py
+
 This is a Python program to sove minsweeper problems on this website https://minesweeperonline.com/.
 
 minesweeper_board.py is done along with a simple test for this part of the program.
