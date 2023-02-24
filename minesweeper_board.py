@@ -66,7 +66,7 @@ class Board:
                     
 
     def _get_adjacents(self, x : int, y : int):
-        '''get_adjacents method''' #returns list of adjacent tiles in (x,y,val) format
+        '''_get_adjacents method''' #returns list of adjacent tiles in (x,y,val) format
         adjacent : list = []
         adjacent_index : list = [(x-1,y-1),(x-1,y),(x-1,y+1),(x,y-1),(x,y+1),(x+1,y-1),(x+1,y),(x+1,y+1)] #list of adjacent indexs
         for x1,y1 in adjacent_index:
@@ -76,12 +76,12 @@ class Board:
         return adjacent
 
     def _valid_index(self, x,y):
-        '''valid_index method'''
+        '''_valid_index method'''
         return x < self._xm and x >= 0 and y < self._ym and y >= 0
     
     @staticmethod
     def _count_flags(tiles : list):
-        "static count_flags method" #returns count of blank and flaged tiles from list of (x,y,val) format
+        "static _count_flags method" #returns count of blank and flaged tiles from list of (x,y,val) format
         blanks : int = 0
         flags : int = 0
         for x,y,val in tiles:
@@ -93,7 +93,7 @@ class Board:
     
     @staticmethod
     def _get_blank_updates(tiles : list, updateType):
-        '''static get_blank_updates method''' #given a list of tiles in (x,y,val) format returns a list of all blank tiles in (x,y,updateType) format updateType being -1 for open and -2 for flag 
+        '''static _get_blank_updates method''' #given a list of tiles in (x,y,val) format returns a list of all blank tiles in (x,y,updateType) format updateType being -1 for open and -2 for flag 
         updates : list = []
         for x,y,val in tiles:
             if val == -1:
